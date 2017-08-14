@@ -1,0 +1,17 @@
+
+if (sessionStorage.user =="" || sessionStorage.user==null)
+{
+    window.location.href = "../Login/index.html";
+}
+else {
+
+
+    function openPage() {
+        if (sessionStorage.person == "Admin") {
+            document.getElementById('dashboard').style.display = "block";
+        }
+        else {
+            document.getElementById("dashboard").style.display = "none";
+        }
+    }
+}

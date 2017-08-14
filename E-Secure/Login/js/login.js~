@@ -1,0 +1,154 @@
+username="";
+
+function login()
+{
+    if(document.getElementById('user').value=="" && document.getElementById('pass').value=="")
+    {
+        alert("Username or password is required");
+    }
+    else
+    {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                array=JSON.parse(this.responseText);
+
+                if(array.status=="200")
+                {
+                    sessionStorage.setItem("person",array.person);
+                    sessionStorage.setItem("user",array.username);
+                    sessionStorage.setItem("uid",array.aid);
+                    window.location="../MainMenu/index.html";
+                }
+                else if(array.status=="400")
+                {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            array=JSON.parse(this.responseText);
+
+                            if(array.status=="200")
+                            {
+                                sessionStorage.setItem("person",array.person);
+                                sessionStorage.setItem("user",array.username);
+                                sessionStorage.setItem("uid",array.uid);
+                                window.location="../MainMenu/index.html";
+                            }
+                            else if(array.status=="400")
+                            {
+                                alert("Check your username and password");
+                            }
+
+                        }
+                    };
+                    xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Sucure/login.php?username=" +document.getElementById("user").value+"&password="+document.getElementById("pass").value, true);
+                    xmlhttp.send();
+
+                }
+
+            }
+        };
+        xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Sucure/loginadmin.php?username=" +document.getElementById("user").value+"&password="+document.getElementById("pass").value, true);
+        xmlhttp.send();
+
+
+    }
+}
+
+function signup()
+{
+    checkusername();
+
+   // alert(username);
+
+    if (document.getElementById('ruser').value=="" || document.getElementById('rpass').value==""  || document.getElementById('email').value=="" || document.getElementById('repass').value=="" || document.getElementById('fname').value=="" || document.getElementById('lname').value=="" || username=="false")
+    {
+        alert("All field are required");
+    }
+    else
+    {
+        var email=document.getElementById('email').value;
+        var EmailValidation=ValidateEmail(email);
+        if (document.getElementById('rpass').value==document.getElementById('repass').value && EmailValidation)
+        {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+
+                    array=JSON.parse(this.responseText);
+
+                    if(array.status=="200")
+                    {
+                        alert("Registration Succeed now you can use our website for identify the malware ");
+                        location.reload();
+                    }
+                    else
+                    {
+                        alert("System Error");
+                    }
+
+
+                }
+            };
+            xmlhttp.open("GET", "http://localhost/SLIIT/E-Sucure/register.php?username="+document.getElementById('ruser').value+"&password="+document.getElementById('rpass').value+"&email="+document.getElementById('email').value+"&firstname="+document.getElementById('fname').value+"&lastname="+document.getElementById('lname').value, true);
+            xmlhttp.send();
+
+
+        }
+        else
+        {
+            alert("Error\n 1. Check your passwords \n 2. Check your email");
+        }
+
+    }
+}
+
+function checkusername() {
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+
+            array = JSON.parse(this.responseText);
+            //alert(this.responseText);
+
+            //alert(array.status);
+            if (array.status == "200") {
+                document.getElementById("usercheck").innerHTML="Username already found Try new username";
+                username = "false";
+            }
+            else {
+                username = "true";
+                document.getElementById("usercheck").innerHTML="";
+            }
+
+
+        }
+    };
+    xmlhttp.open("GET", "http://localhost/SLIIT/E-Sucure/usernamecheck.php?username=" + document.getElementById('ruser').value, true);
+    xmlhttp.send();
+}
+
+function forgot()
+{
+    var email = prompt("Enter your email ", "");
+
+    var EmailValidation=ValidateEmail(email);
+    if (email != null && EmailValidation)
+    {
+        alert("Your temporary password is sent to your mail "+email);
+    }
+    else
+    {
+        alert("Mail is not correct format");
+    }
+}
+
+function ValidateEmail(mail)
+{
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (mail.match(mailformat)) {
+        return (true)
+    }
+    return (false)
+}

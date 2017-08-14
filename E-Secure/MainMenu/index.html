@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>E-Secure</title>
+		<meta name="description" content="Perspective Page View Navigation: Transforms the page in 3D to reveal a menu" />
+		<meta name="keywords" content="3d page, menu, navigation, mobile, perspective, css transform, web development, web design" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<!-- csstransforms3d-shiv-cssclasses-prefixed-teststyles-testprop-testallprops-prefixes-domprefixes-load --> 
+		<script src="js/modernizr.custom.25376.js"></script>
+	</head>
+	<body onload="openPage()">
+		<div id="perspective" class="perspective effect-airbnb">
+			<div class="container">
+				<div class="wrapper"><!-- wrapper needed for scroll -->
+					<!-- Top Navigation -->
+					<div class="codrops-top clearfix">
+						<!--<a class="codrops-icon codrops-icon-prev"><span>Previous Demo</span></a>-->
+						<span class="right"><a class="codrops-icon codrops-icon-drop"><span>User Name : <span id="username"> </span>  [ <span id="person"> </span> ]</span></a></span><br/>
+						<span class="right"><a class="codrops-icon codrops-icon-drop" href="../Login/index.html"><span> Logout</span></a></span>
+					</div>
+					<header class="codrops-header">
+						<h1>E-Secure <span>We are helping to identify the Malware</span></h1>
+					</header>
+					<div class="main clearfix">
+						<div class="column">
+							<p><button id="showMenu">Menu</button></p>
+							<p>Discription about our product </p>
+						</div>
+						<div class="column">
+							<nav>
+								<p>Discription about our product </p>
+							</nav>
+
+						</div>
+						<div class="related">
+							<p></p><a>Designed by E-Secure Team </a></p>
+							<p><a>This is System is designed for SLIIT</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<nav class="outer-nav left vertical">
+				<a href="../MainMenu/index.html" class="icon-home">Home</a>
+				<a href="../FileInput/index.html" class="icon-upload">Upload Files</a>
+				<a href="../URLupload/index.html" class="icon-upload">Upload Url</a>
+				<div id="dashboard" style="display:none;" >
+				<a href="../Dashboard/index.html"  class="icon-news" >Dashboard</a>
+				</div>
+                                <div id="userview" style="display:none;" >
+					<a href="../UserView/index.html"  class="icon-news" >UserView</a>
+				</div>
+			</nav>
+		</div><!-- /perspective -->
+		<script src="js/classie.js"></script>
+		<script src="js/menu.js"></script>
+		<script>
+            document.getElementById("username").innerHTML=sessionStorage.user;
+            document.getElementById("person").innerHTML=sessionStorage.person;
+		</script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

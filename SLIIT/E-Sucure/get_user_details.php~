@@ -1,0 +1,71 @@
+<?php
+header("Access-Control-Allow-Origin: *");
+ini_set('memory_limit', '-1');
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "E-Secure";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+$sql= "Select * from user_file ";
+$id="";
+$result=mysqli_query($conn,$sql);
+$no_of_rows=mysqli_num_rows($result);
+
+$temp_array=array();
+
+if ($no_of_rows > 0)
+{
+    $output = '';
+    $output .= '  
+                <table style="border: 1px solid black; text-align: center;" align="center">  
+                     <tr>  
+                          <th style="border: 1px solid black;">ID</th>
+                          <th style="border: 1px solid black;">Date</th>
+                          <th style="border: 1px solid black;">Time</th> 
+                          <th style="border: 1px solid black;">File Name</th>
+                          <th style="border: 1px solid black;">File Type</th> 
+                          <th style="border: 1px solid black;">Malware</th>
+                          <th style="border: 1px solid black;">Critical</th> 
+                          <th style="border: 1px solid black;">Attachent</th>
+                          <th style="border: 1px solid black;">Behaviour Analysis </th>
+                     </tr>  
+           ';
+    while($row=mysqli_fetch_assoc($result))
+    {
+        $space="                          " ;
+        $path=$row["attachment_path"];
+        $output .= '  
+                     <tr>  
+                          <th style="border: 1px solid black;">' . $row["user_file_id"]. '</th>  
+                          <th style="border: 1px solid black;"> '.$row["date"] .'</th>
+                          <th style="border: 1px solid black;"> '.$row["time"] . '</th>
+                          <th style="border: 1px solid black;"> '.$row["filename"] . '</th>
+                          <th style="border: 1px solid black;"> '.$row["filetype"] . '</th>
+                          <th style="border: 1px solid black;"> '.$row["malware"] . '</th>
+                          <th style="border: 1px solid black;"> '.$row["critical"] . '</th>
+                          <th style="border: 1px solid black;"> <a href="'.$path.'" download><input type="button" name="Download Attachment" value="Download Attachment" id="'.$id .'"></a></th>
+                          <th style="border: 1px solid black;"> <input type="button" name="Download CSV Attachment" value="View Details" id="'.$id .'"  onclick="file(\''.$row["user_file_id"].'\');" ></th>
+                     </tr>  
+                ';
+    }
+    $output .= '</table>';
+    echo $output;
+}
+else
+{
+    echo "";
+}
+$conn->close();
+
+
+
+
+
+
+
+
+?>

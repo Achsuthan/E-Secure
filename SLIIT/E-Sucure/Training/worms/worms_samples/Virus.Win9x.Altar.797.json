@@ -1,0 +1,4475 @@
+{
+    "info": {
+        "category": "file", 
+        "started": "2017-07-31 13:32:33", 
+        "custom": "", 
+        "ended": "2017-07-31 13:34:37", 
+        "version": "1.0", 
+        "duration": 124, 
+        "id": 88
+    }, 
+    "signatures": [], 
+    "static": {}, 
+    "dropped": [], 
+    "behavior": {
+        "processes": [
+            {
+                "parent_id": 1008, 
+                "process_name": "Virus.Win9x.Altar.797", 
+                "process_id": 1192, 
+                "first_seen": "2017-07-31 13:32:38,349", 
+                "calls": [
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,539", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtOpenKey", 
+                        "arguments": [
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "KeyHandle", 
+                                "value": "0x00000074"
+                            }, 
+                            {
+                                "name": "ObjectAttributes", 
+                                "value": "C:\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AeDebug"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,539", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryValueKey", 
+                        "arguments": [
+                            {
+                                "name": "Information", 
+                                "value": "1\\x00\\x00\\x00"
+                            }, 
+                            {
+                                "name": "KeyHandle", 
+                                "value": "0x00000074"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "Auto"
+                            }, 
+                            {
+                                "name": "Type", 
+                                "value": "1"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,539", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryValueKey", 
+                        "arguments": [
+                            {
+                                "name": "Information", 
+                                "value": "d\\x00r\\x00w\\x00t\\x00s\\x00n\\x003\\x002\\x00 \\x00-\\x00p\\x00 \\x00%\\x00l\\x00d\\x00 \\x00-\\x00e\\x00 \\x00%\\x00l\\x00d\\x00 \\x00-\\x00g\\x00\\x00\\x00"
+                            }, 
+                            {
+                                "name": "KeyHandle", 
+                                "value": "0x00000074"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "Debugger"
+                            }, 
+                            {
+                                "name": "Type", 
+                                "value": "1"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,629", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrLoadDll", 
+                        "arguments": [
+                            {
+                                "name": "Flags", 
+                                "value": "0"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x69450000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\WINDOWS\\system32\\faultrep.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,679", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrGetProcedureAddress", 
+                        "arguments": [
+                            {
+                                "name": "Ordinal", 
+                                "value": "0"
+                            }, 
+                            {
+                                "name": "FunctionName", 
+                                "value": "ReportFault"
+                            }, 
+                            {
+                                "name": "FunctionAddress", 
+                                "value": "0x69457d7e"
+                            }, 
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x69450000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": false, 
+                        "return": "0x00000002", 
+                        "timestamp": "2017-07-31 13:32:38,679", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegOpenKeyExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "Registry", 
+                                "value": "0x80000002"
+                            }, 
+                            {
+                                "name": "SubKey", 
+                                "value": "Software\\Policies\\Microsoft\\PCHealth\\ErrorReporting"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,679", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegCreateKeyExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "Access", 
+                                "value": "131353"
+                            }, 
+                            {
+                                "name": "Registry", 
+                                "value": "0x80000002"
+                            }, 
+                            {
+                                "name": "Class", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "SubKey", 
+                                "value": "Software\\Microsoft\\PCHealth\\ErrorReporting"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": false, 
+                        "return": "0x00000002", 
+                        "timestamp": "2017-07-31 13:32:38,679", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegDeleteKeyW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "SubKey", 
+                                "value": "DW"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,689", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "Data", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "DoReport"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,689", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "Data", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "ShowUI"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,689", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "Data", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "AllOrNone"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,689", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "Data", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "IncludeMicrosoftApps"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,689", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "Data", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "IncludeWindowsApps"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": false, 
+                        "return": "0x00000002", 
+                        "timestamp": "2017-07-31 13:32:38,689", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "DataLength", 
+                                "value": "4"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "DoTextLog"
+                            }, 
+                            {
+                                "name": "Type", 
+                                "value": "1239500"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "Data", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "IncludeKernelFaults"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": false, 
+                        "return": "0x00000002", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "DataLength", 
+                                "value": "4"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "IncludeShutdownErrs"
+                            }, 
+                            {
+                                "name": "Type", 
+                                "value": "1239520"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": false, 
+                        "return": "0x00000002", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "DataLength", 
+                                "value": "4"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "NumberOfFaultPipes"
+                            }, 
+                            {
+                                "name": "Type", 
+                                "value": "1239528"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": false, 
+                        "return": "0x00000002", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "DataLength", 
+                                "value": "4"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "NumberOfHangPipes"
+                            }, 
+                            {
+                                "name": "Type", 
+                                "value": "1239532"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": false, 
+                        "return": "0x00000002", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "DataLength", 
+                                "value": "4"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "MaxUserQueueSize"
+                            }, 
+                            {
+                                "name": "Type", 
+                                "value": "1239536"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": false, 
+                        "return": "0x00000002", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "DataLength", 
+                                "value": "4"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "ForceQueueMode"
+                            }, 
+                            {
+                                "name": "Type", 
+                                "value": "1242112"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegCreateKeyExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000094"
+                            }, 
+                            {
+                                "name": "Access", 
+                                "value": "131353"
+                            }, 
+                            {
+                                "name": "Registry", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "Class", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "SubKey", 
+                                "value": "ExclusionList"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegCreateKeyExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000098"
+                            }, 
+                            {
+                                "name": "Access", 
+                                "value": "131353"
+                            }, 
+                            {
+                                "name": "Registry", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "Class", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "SubKey", 
+                                "value": "InclusionList"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegCloseKey", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegOpenKeyExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "Registry", 
+                                "value": "0x80000002"
+                            }, 
+                            {
+                                "name": "SubKey", 
+                                "value": "System\\Setup"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "Data", 
+                                "value": "0"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "SystemSetupInProgress"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegCloseKey", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000090"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00159378", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "FindFirstFileExW", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00159378", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "FindFirstFileExW", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00159378", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "FindFirstFileExW", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00159378", 
+                        "timestamp": "2017-07-31 13:32:38,699", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "FindFirstFileExW", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,769", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrGetDllHandle", 
+                        "arguments": [
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x00400000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\Documents and Settings\\Achsuthan\\Local Settings\\Temp\\Virus.Win9x.Altar.797"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,769", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrLoadDll", 
+                        "arguments": [
+                            {
+                                "name": "Flags", 
+                                "value": "1238192"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x00400000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\Documents and Settings\\Achsuthan\\Local Settings\\Temp\\Virus.Win9x.Altar.797"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": false, 
+                        "return": "0x00000002", 
+                        "timestamp": "2017-07-31 13:32:38,769", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000094"
+                            }, 
+                            {
+                                "name": "DataLength", 
+                                "value": "4"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "Virus.Win9x.Altar.797"
+                            }, 
+                            {
+                                "name": "Type", 
+                                "value": "1238716"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,809", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtOpenFile", 
+                        "arguments": [
+                            {
+                                "name": "ShareAccess", 
+                                "value": "7"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\Device\\KsecDD"
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x00100001"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x00000090"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "device", 
+                        "status": true, 
+                        "return": "0x00000001", 
+                        "timestamp": "2017-07-31 13:32:38,849", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "DeviceIoControl", 
+                        "arguments": [
+                            {
+                                "name": "DeviceHandle", 
+                                "value": "0x00000090"
+                            }, 
+                            {
+                                "name": "OutBuffer", 
+                                "value": "\\xfcW\\xd6\\x85Flg\\x97\\x99k\\xf1e\\x9c\\xc3_\\xa8-\\x8b\\xe7\\xc2J@V\\xd4C\\x1b_\\x13\\x8b\\xf4(\\x1a$W\\x0e\\x14\\xe7\\xe1\\xe5\\x0e\\x1bP\\x15\\xc2\\xa5c\\xb4I\\xf3\\xeb\\x1c\\xc8\\xfc\\xbdn\\x05\\xde\\x11\\x9d\\x03\\xca\\xb9\\xac\\xc4\\xfaA\\x93C\\xe0\\x8f\\xb5\\x1c\\xd4}a\\xde\\xe8\\xf0\\xdfP5\\x06`&N`\\xa6\\xb2_\\xd9\\x158\\x97\\x08\\xb6\\xb4\\x81}m6\\xf8\r\\xf7\\xae\\x1f\\x10\\x1e\\xb2\\x05\\xa9\\xd6\\x96\\xd8\\xaf\\x9c\\x1a\\x95\\xaf7\\xc96\\x96\\xff\\xbc\\xef\\x0e\\xb6\\xb2G\\x7f9\\xde\\xce\n\\xec\\xdf\\x97\\xa1\\x8c\\x02I\\x08\\x0e\\xb9\\xcbzc1\\x85\\x80\\xa3=\\x19{\\xf1\\xfd\\x17\\x03|\\x9d\\x00\\x81+\\x87|D\\xa6\\xa3n\\x15Y\\xf2l\\x92T\\xc5bW\\x88]X\\x84\\xec\\xa1\\x10J\\xc7`\n\\xa3D3c\\\\xfd\\xfdf\\xd9L\\x15(S\\x9b\\x0f\\xd5a\\xa8\\x05\\x88\\xdf\\x91\\xb5\\xb3\\xe9\\xbdg\\xb9\\xf6\\x82\\xde\\xa4`\\xea?L\\xb02\\x85JH\\xbf\\x02~\\xcb]\n#\\x9bw\\x16\\xe0\\xe3\\x04\\xc9@\\xf53\\xf7\\x1c\\x93\\xc8\\x85\\x07\\x89\\xd6z"
+                            }, 
+                            {
+                                "name": "IoControlCode", 
+                                "value": "3735560"
+                            }, 
+                            {
+                                "name": "InBuffer", 
+                                "value": "\\xa6\\xa8\\xad\\xc7\\xe9\\x0ccJ\\xe7\\x14\\x8bjd\\xbb\\xa9\\x96\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,939", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtOpenKey", 
+                        "arguments": [
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "131097"
+                            }, 
+                            {
+                                "name": "KeyHandle", 
+                                "value": "0x000000a4"
+                            }, 
+                            {
+                                "name": "ObjectAttributes", 
+                                "value": "C:\\Registry\\Machine\\System\\CurrentControlSet\\Control\\ComputerName"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,939", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtOpenKey", 
+                        "arguments": [
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "131097"
+                            }, 
+                            {
+                                "name": "KeyHandle", 
+                                "value": "0x000000a8"
+                            }, 
+                            {
+                                "name": "ObjectAttributes", 
+                                "value": "C:\\ActiveComputerName"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,939", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryValueKey", 
+                        "arguments": [
+                            {
+                                "name": "Information", 
+                                "value": "S\\x00L\\x00I\\x00I\\x00T\\x00-\\x000\\x00C\\x00E\\x008\\x009\\x00D\\x00B\\x003\\x000\\x00\\x00\\x00"
+                            }, 
+                            {
+                                "name": "KeyHandle", 
+                                "value": "0x000000a8"
+                            }, 
+                            {
+                                "name": "ValueName", 
+                                "value": "ComputerName"
+                            }, 
+                            {
+                                "name": "Type", 
+                                "value": "1"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,950", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateFile", 
+                        "arguments": [
+                            {
+                                "name": "ShareAccess", 
+                                "value": "3"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "PIPE\\lsarpc"
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0xc0100080"
+                            }, 
+                            {
+                                "name": "CreateDisposition", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000b4"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,950", 
+                        "thread_id": "1148", 
+                        "repeated": 1, 
+                        "api": "NtSetInformationFile", 
+                        "arguments": [
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000b4"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,950", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtWriteFile", 
+                        "arguments": [
+                            {
+                                "name": "Buffer", 
+                                "value": "\\x05\\x00\\x0b\\x03\\x10\\x00\\x00\\x00H\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xb8\\x10\\xb8\\x10\\x00\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x00\\x00\\x01\\x00xW4\\x124\\x12\\xcd\\xab\\xef\\x00\\x01#Eg\\x89\\xab\\x00\\x00\\x00\\x00\\x04]\\x88\\x8a\\xeb\\x1c\\xc9\\x11\\x9f\\xe8\\x08\\x00+\\x10H`\\x02\\x00\\x00\\x00"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000b4"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,950", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtReadFile", 
+                        "arguments": [
+                            {
+                                "name": "Buffer", 
+                                "value": "\\x05\\x00\\x0c\\x03\\x10\\x00\\x00\\x00D\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xb8\\x10\\xb8\\x10\\xae;\\x00\\x00\\x0c\\x00\\PIPE\\lsass\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x04]\\x88\\x8a\\xeb\\x1c\\xc9\\x11\\x9f\\xe8\\x08\\x00+\\x10H`\\x02\\x00\\x00\\x00"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000b4"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,980", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateFile", 
+                        "arguments": [
+                            {
+                                "name": "ShareAccess", 
+                                "value": "3"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "PIPE\\lsarpc"
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0xc0100080"
+                            }, 
+                            {
+                                "name": "CreateDisposition", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000b0"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,990", 
+                        "thread_id": "1148", 
+                        "repeated": 1, 
+                        "api": "NtSetInformationFile", 
+                        "arguments": [
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000b0"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,990", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtWriteFile", 
+                        "arguments": [
+                            {
+                                "name": "Buffer", 
+                                "value": "\\x05\\x00\\x0b\\x03\\x10\\x00\\x00\\x00H\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xb8\\x10\\xb8\\x10\\x00\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x00\\x00\\x01\\x00xW4\\x124\\x12\\xcd\\xab\\xef\\x00\\x01#Eg\\x89\\xab\\x00\\x00\\x00\\x00\\x04]\\x88\\x8a\\xeb\\x1c\\xc9\\x11\\x9f\\xe8\\x08\\x00+\\x10H`\\x02\\x00\\x00\\x00"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000b0"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:38,990", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtReadFile", 
+                        "arguments": [
+                            {
+                                "name": "Buffer", 
+                                "value": "\\x05\\x00\\x0c\\x03\\x10\\x00\\x00\\x00D\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\xb8\\x10\\xb8\\x10\\xaf;\\x00\\x00\\x0c\\x00\\PIPE\\lsass\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x04]\\x88\\x8a\\xeb\\x1c\\xc9\\x11\\x9f\\xe8\\x08\\x00+\\x10H`\\x02\\x00\\x00\\x00"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000b0"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,040", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtOpenDirectoryObject", 
+                        "arguments": [
+                            {
+                                "name": "DirectoryHandle", 
+                                "value": "0x000000b4"
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "2"
+                            }, 
+                            {
+                                "name": "ObjectAttributes", 
+                                "value": "C:\\Windows\\WindowStations"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": false, 
+                        "return": "0xc0000135", 
+                        "timestamp": "2017-07-31 13:32:39,040", 
+                        "thread_id": "1148", 
+                        "repeated": 1, 
+                        "api": "LdrGetDllHandle", 
+                        "arguments": [
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "ddraw.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": false, 
+                        "return": "0xc0000135", 
+                        "timestamp": "2017-07-31 13:32:39,040", 
+                        "thread_id": "1148", 
+                        "repeated": 1, 
+                        "api": "LdrGetDllHandle", 
+                        "arguments": [
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "d3d8.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": false, 
+                        "return": "0xc0000135", 
+                        "timestamp": "2017-07-31 13:32:39,040", 
+                        "thread_id": "1148", 
+                        "repeated": 1, 
+                        "api": "LdrGetDllHandle", 
+                        "arguments": [
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "d3d9.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "synchronization", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,040", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateMutant", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x000000b4"
+                            }, 
+                            {
+                                "name": "InitialOwner", 
+                                "value": "0"
+                            }, 
+                            {
+                                "name": "MutexName", 
+                                "value": ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,040", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateSection", 
+                        "arguments": [
+                            {
+                                "name": "ObjectAttributes", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x000f0007"
+                            }, 
+                            {
+                                "name": "SectionHandle", 
+                                "value": "0x000000c0"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x00000000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,040", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "ZwMapViewOfSection", 
+                        "arguments": [
+                            {
+                                "name": "SectionOffset", 
+                                "value": "0x0012dfa4"
+                            }, 
+                            {
+                                "name": "SectionHandle", 
+                                "value": "0x000000c0"
+                            }, 
+                            {
+                                "name": "ProcessHandle", 
+                                "value": "0xffffffff"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x00390000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,050", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrGetDllHandle", 
+                        "arguments": [
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x00400000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\Virus.Win9x.Altar.797"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,060", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrLoadDll", 
+                        "arguments": [
+                            {
+                                "name": "Flags", 
+                                "value": "1236280"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x00400000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\Virus.Win9x.Altar.797"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,060", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateFile", 
+                        "arguments": [
+                            {
+                                "name": "ShareAccess", 
+                                "value": "0"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\f2db_appcompat.txt"
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x10100080"
+                            }, 
+                            {
+                                "name": "CreateDisposition", 
+                                "value": "2"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c4"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,060", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateSection", 
+                        "arguments": [
+                            {
+                                "name": "ObjectAttributes", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x000f001f"
+                            }, 
+                            {
+                                "name": "SectionHandle", 
+                                "value": "0x000000c4"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x00000000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,060", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "ZwMapViewOfSection", 
+                        "arguments": [
+                            {
+                                "name": "SectionOffset", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "SectionHandle", 
+                                "value": "0x000000c4"
+                            }, 
+                            {
+                                "name": "ProcessHandle", 
+                                "value": "0xffffffff"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x008f0000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,100", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateSection", 
+                        "arguments": [
+                            {
+                                "name": "ObjectAttributes", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x000f0007"
+                            }, 
+                            {
+                                "name": "SectionHandle", 
+                                "value": "0x000000c8"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x00000000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,110", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "ZwMapViewOfSection", 
+                        "arguments": [
+                            {
+                                "name": "SectionOffset", 
+                                "value": "0x0012db20"
+                            }, 
+                            {
+                                "name": "SectionHandle", 
+                                "value": "0x000000c8"
+                            }, 
+                            {
+                                "name": "ProcessHandle", 
+                                "value": "0xffffffff"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x003a0000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,150", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "ZwMapViewOfSection", 
+                        "arguments": [
+                            {
+                                "name": "SectionOffset", 
+                                "value": "0x0012db38"
+                            }, 
+                            {
+                                "name": "SectionHandle", 
+                                "value": "0x000000c8"
+                            }, 
+                            {
+                                "name": "ProcessHandle", 
+                                "value": "0xffffffff"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x003a0000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,210", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "ZwMapViewOfSection", 
+                        "arguments": [
+                            {
+                                "name": "SectionOffset", 
+                                "value": "0x0012db70"
+                            }, 
+                            {
+                                "name": "SectionHandle", 
+                                "value": "0x000000c8"
+                            }, 
+                            {
+                                "name": "ProcessHandle", 
+                                "value": "0xffffffff"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x003a0000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,250", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrLoadDll", 
+                        "arguments": [
+                            {
+                                "name": "Flags", 
+                                "value": "1236552"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x77b40000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\WINDOWS\\system32\\apphelp.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,260", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrGetProcedureAddress", 
+                        "arguments": [
+                            {
+                                "name": "Ordinal", 
+                                "value": "0"
+                            }, 
+                            {
+                                "name": "FunctionName", 
+                                "value": "SdbGrabMatchingInfo"
+                            }, 
+                            {
+                                "name": "FunctionAddress", 
+                                "value": "0x77b5aa29"
+                            }, 
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x77b40000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,270", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrLoadDll", 
+                        "arguments": [
+                            {
+                                "name": "Flags", 
+                                "value": "1235836"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x7e410000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "USER32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,270", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrGetProcedureAddress", 
+                        "arguments": [
+                            {
+                                "name": "Ordinal", 
+                                "value": "0"
+                            }, 
+                            {
+                                "name": "FunctionName", 
+                                "value": "CharNextW"
+                            }, 
+                            {
+                                "name": "FunctionAddress", 
+                                "value": "0x7e42b1b0"
+                            }, 
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x7e410000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,300", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateFile", 
+                        "arguments": [
+                            {
+                                "name": "ShareAccess", 
+                                "value": "0"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\f2db_appcompat.txt"
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x40100080"
+                            }, 
+                            {
+                                "name": "CreateDisposition", 
+                                "value": "5"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c8"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x001599a8", 
+                        "timestamp": "2017-07-31 13:32:39,300", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "FindFirstFileExW", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\*"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,300", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtWriteFile", 
+                        "arguments": [
+                            {
+                                "name": "Buffer", 
+                                "value": "\\xff\\xfe"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c8"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,440", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtWriteFile", 
+                        "arguments": [
+                            {
+                                "name": "Buffer", 
+                                "value": "<\\x00?\\x00x\\x00m\\x00l\\x00 \\x00v\\x00e\\x00r\\x00s\\x00i\\x00o\\x00n\\x00=\\x00\"\\x001\\x00.\\x000\\x00\"\\x00 \\x00e\\x00n\\x00c\\x00o\\x00d\\x00i\\x00n\\x00g\\x00=\\x00\"\\x00U\\x00T\\x00F\\x00-\\x001\\x006\\x00\"\\x00?\\x00>\\x00\r\\x00\n\\x00<\\x00D\\x00A\\x00T\\x00A\\x00B\\x00A\\x00S\\x00E\\x00>\\x00\r\\x00\n\\x00"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c8"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,440", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtWriteFile", 
+                        "arguments": [
+                            {
+                                "name": "Buffer", 
+                                "value": "<\\x00E\\x00X\\x00E\\x00 \\x00N\\x00A\\x00M\\x00E\\x00=\\x00\"\\x00V\\x00i\\x00r\\x00u\\x00s\\x00.\\x00W\\x00i\\x00n\\x009\\x00x\\x00.\\x00A\\x00l\\x00t\\x00a\\x00r\\x00.\\x007\\x009\\x007\\x00\"\\x00 \\x00F\\x00I\\x00L\\x00T\\x00E\\x00R\\x00=\\x00\"\\x00G\\x00R\\x00A\\x00B\\x00M\\x00I\\x00_\\x00F\\x00I\\x00L\\x00T\\x00E\\x00R\\x00_\\x00P\\x00R\\x00I\\x00V\\x00A\\x00C\\x00Y\\x00\"\\x00>\\x00\r\\x00\n\\x00"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c8"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,440", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryDirectoryFile", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c4"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": "h\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xf0\\xa0U\\xef\\xf8\\xef\\xd2\\x018 \\xe0`\\xd3\t\\xd3\\x018 \\xe0`\\xd3\t\\xd3\\x018 \\xe0`\\xd3\t\\xd3\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x10\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00.\\x00.\\x00\\x00\\x00\\x00\\x00\\x00\\x00x\\x00\\x00\\x00\\x00\\x00\\x00\\x00y\\xba\\xe3\\xeaP\\xf0\\xd2\\x01y\\xc2\\xa4\\xebP\\xf0\\xd2\\x01y\\xc2\\xa4\\xebP\\xf0\\xd2\\x01y\\xc2\\xa4\\xebP\\xf0\\xd2\\x01P\\x02\\x00\\x00\\x00\\x00\\x00\\x00P\\x02\\x00\\x00\\x00\\x00\\x00\\x00 \\x00\\x00\\x00\\x18\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00A\\x00d\\x00o\\x00b\\x00e\\x00A\\x00R\\x00M\\x00.\\x00l\\x00o\\x00g\\x00\\x00\\x00x\\x00\\x00\\x00\\x00\\x00\\x00\\x00k7\\x18*P\\xf0\\xd2\\x01q\\xf8\\xea\\xb7P\\xf0\\xd2\\x01q\\xf8\\xea\\xb7P\\xf0\\xd2\\x01"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,440", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrLoadDll", 
+                        "arguments": [
+                            {
+                                "name": "Flags", 
+                                "value": "1235120"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x77f60000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "SHLWAPI.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,440", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrGetProcedureAddress", 
+                        "arguments": [
+                            {
+                                "name": "Ordinal", 
+                                "value": "0"
+                            }, 
+                            {
+                                "name": "FunctionName", 
+                                "value": "PathFindExtensionW"
+                            }, 
+                            {
+                                "name": "FunctionAddress", 
+                                "value": "0x77f66889"
+                            }, 
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x77f60000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,450", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtOpenFile", 
+                        "arguments": [
+                            {
+                                "name": "ShareAccess", 
+                                "value": "3"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp"
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x00100001"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,450", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryDirectoryFile", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": "python-3.4.3.msi"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": "\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00`Z\\xd7\\xb6O\\xf0\\xd2\\x01p\\x0f\\x19\\xb7O\\xf0\\xd2\\x01p\\x0f\\x19\\xb7O\\xf0\\xd2\\x01p\\x0f\\x19\\xb7O\\xf0\\xd2\\x01\\x00 {\\x01\\x00\\x00\\x00\\x00\\x00 {\\x01\\x00\\x00\\x00\\x00 \\x00\\x00\\x00 \\x00\\x00\\x00p\\x00y\\x00t\\x00h\\x00o\\x00n\\x00-\\x003\\x00.\\x004\\x00.\\x003\\x00.\\x00m\\x00s\\x00i\\x00"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,450", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrLoadDll", 
+                        "arguments": [
+                            {
+                                "name": "Flags", 
+                                "value": "1234564"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x77c00000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "VERSION.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,450", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrGetProcedureAddress", 
+                        "arguments": [
+                            {
+                                "name": "Ordinal", 
+                                "value": "0"
+                            }, 
+                            {
+                                "name": "FunctionName", 
+                                "value": "GetFileVersionInfoSizeW"
+                            }, 
+                            {
+                                "name": "FunctionAddress", 
+                                "value": "0x77c0138c"
+                            }, 
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x77c00000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": false, 
+                        "return": "0xc0000135", 
+                        "timestamp": "2017-07-31 13:32:39,490", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrGetDllHandle", 
+                        "arguments": [
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\python-3.4.3.msi"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,490", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateFile", 
+                        "arguments": [
+                            {
+                                "name": "ShareAccess", 
+                                "value": "5"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\python-3.4.3.msi"
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x80100080"
+                            }, 
+                            {
+                                "name": "CreateDisposition", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000d0"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,500", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateSection", 
+                        "arguments": [
+                            {
+                                "name": "ObjectAttributes", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x000f0005"
+                            }, 
+                            {
+                                "name": "SectionHandle", 
+                                "value": "0x000000cc"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000d0"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,500", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "ZwMapViewOfSection", 
+                        "arguments": [
+                            {
+                                "name": "SectionOffset", 
+                                "value": "0x0012d420"
+                            }, 
+                            {
+                                "name": "SectionHandle", 
+                                "value": "0x000000cc"
+                            }, 
+                            {
+                                "name": "ProcessHandle", 
+                                "value": "0xffffffff"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x008f0000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,681", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrLoadDll", 
+                        "arguments": [
+                            {
+                                "name": "Flags", 
+                                "value": "1234608"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x7c9c0000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "shell32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,681", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrGetProcedureAddress", 
+                        "arguments": [
+                            {
+                                "name": "Ordinal", 
+                                "value": "0"
+                            }, 
+                            {
+                                "name": "FunctionName", 
+                                "value": "ExtractVersionResource16W"
+                            }, 
+                            {
+                                "name": "FunctionAddress", 
+                                "value": "0x7ca23e54"
+                            }, 
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x7c9c0000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,681", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateFile", 
+                        "arguments": [
+                            {
+                                "name": "ShareAccess", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\python-3.4.3.msi"
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x80100080"
+                            }, 
+                            {
+                                "name": "CreateDisposition", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,681", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtReadFile", 
+                        "arguments": [
+                            {
+                                "name": "Buffer", 
+                                "value": "\\xd0\\xcf"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,711", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrGetDllHandle", 
+                        "arguments": [
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x7c800000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "Kernel32"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,711", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrGetProcedureAddress", 
+                        "arguments": [
+                            {
+                                "name": "Ordinal", 
+                                "value": "0"
+                            }, 
+                            {
+                                "name": "FunctionName", 
+                                "value": "ReleaseActCtx"
+                            }, 
+                            {
+                                "name": "FunctionAddress", 
+                                "value": "0x7c81f3f0"
+                            }, 
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x7c800000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,741", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateFile", 
+                        "arguments": [
+                            {
+                                "name": "ShareAccess", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\python-3.4.3.msi"
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x80100080"
+                            }, 
+                            {
+                                "name": "CreateDisposition", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,741", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryInformationFile", 
+                        "arguments": [
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": "\\x00 {\\x01\\x00\\x00\\x00\\x00\\x00 {\\x01\\x00\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,741", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateSection", 
+                        "arguments": [
+                            {
+                                "name": "ObjectAttributes", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x00000004"
+                            }, 
+                            {
+                                "name": "SectionHandle", 
+                                "value": "0x000000d4"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,741", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "ZwMapViewOfSection", 
+                        "arguments": [
+                            {
+                                "name": "SectionOffset", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "SectionHandle", 
+                                "value": "0x000000d4"
+                            }, 
+                            {
+                                "name": "ProcessHandle", 
+                                "value": "0xffffffff"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x008f0000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,791", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtWriteFile", 
+                        "arguments": [
+                            {
+                                "name": "Buffer", 
+                                "value": " \\x00 \\x00 \\x00 \\x00<\\x00M\\x00A\\x00T\\x00C\\x00H\\x00I\\x00N\\x00G\\x00_\\x00F\\x00I\\x00L\\x00E\\x00 \\x00N\\x00A\\x00M\\x00E\\x00=\\x00\"\\x00p\\x00y\\x00t\\x00h\\x00o\\x00n\\x00-\\x003\\x00.\\x004\\x00.\\x003\\x00.\\x00m\\x00s\\x00i\\x00\"\\x00 \\x00S\\x00I\\x00Z\\x00E\\x00=\\x00\"\\x002\\x004\\x008\\x004\\x006\\x003\\x003\\x006\\x00\"\\x00 \\x00C\\x00H\\x00E\\x00C\\x00K\\x00S\\x00U\\x00M\\x00=\\x00\"\\x000\\x00x\\x005\\x003\\x00F\\x005\\x000\\x00F\\x007\\x009\\x00\"\\x00 \\x00/\\x00>\\x00\r\\x00\n\\x00"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c8"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": false, 
+                        "return": "0x80000006", 
+                        "timestamp": "2017-07-31 13:32:39,791", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryDirectoryFile", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c4"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x001599a8", 
+                        "timestamp": "2017-07-31 13:32:39,791", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "FindFirstFileExW", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\*"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,791", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryDirectoryFile", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c4"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": "h\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\xf0\\xa0U\\xef\\xf8\\xef\\xd2\\x018 \\xe0`\\xd3\t\\xd3\\x018 \\xe0`\\xd3\t\\xd3\\x018 \\xe0`\\xd3\t\\xd3\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x10\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00.\\x00.\\x00\\x00\\x00\\x00\\x00\\x00\\x00x\\x00\\x00\\x00\\x00\\x00\\x00\\x00y\\xba\\xe3\\xeaP\\xf0\\xd2\\x01y\\xc2\\xa4\\xebP\\xf0\\xd2\\x01y\\xc2\\xa4\\xebP\\xf0\\xd2\\x01y\\xc2\\xa4\\xebP\\xf0\\xd2\\x01P\\x02\\x00\\x00\\x00\\x00\\x00\\x00P\\x02\\x00\\x00\\x00\\x00\\x00\\x00 \\x00\\x00\\x00\\x18\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00A\\x00d\\x00o\\x00b\\x00e\\x00A\\x00R\\x00M\\x00.\\x00l\\x00o\\x00g\\x00\\x00\\x00x\\x00\\x00\\x00\\x00\\x00\\x00\\x00k7\\x18*P\\xf0\\xd2\\x01q\\xf8\\xea\\xb7P\\xf0\\xd2\\x01q\\xf8\\xea\\xb7P\\xf0\\xd2\\x01"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x001590e8", 
+                        "timestamp": "2017-07-31 13:32:39,791", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "FindFirstFileExW", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\VBoxGuestAdditions\\*"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,791", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryDirectoryFile", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": "h\\x00\\x00\\x00\\x00\\x00\\x00\\x000\\xb5=\\xc2,\\xf0\\xd2\\x010\\xb5=\\xc2,\\xf0\\xd2\\x010\\xb5=\\xc2,\\xf0\\xd2\\x010\\xb5=\\xc2,\\xf0\\xd2\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x10\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00.\\x00.\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x000\\xb5=\\xc2,\\xf0\\xd2\\x010\\xb5=\\xc2,\\xf0\\xd2\\x010\\xb5=\\xc2,\\xf0\\xd2\\x010\\xb5=\\xc2,\\xf0\\xd2\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x10\\x00\\x00\\x00\\x0e\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00V\\x00B\\x00o\\x00x\\x00O\\x00G\\x00L\\x00"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": false, 
+                        "return": "0x80000006", 
+                        "timestamp": "2017-07-31 13:32:39,791", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryDirectoryFile", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x001590e8", 
+                        "timestamp": "2017-07-31 13:32:39,791", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "FindFirstFileExW", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\VBoxGuestAdditions\\*"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,791", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryDirectoryFile", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": "h\\x00\\x00\\x00\\x00\\x00\\x00\\x000\\xb5=\\xc2,\\xf0\\xd2\\x01\\xf2ida\\xd3\t\\xd3\\x010\\xb5=\\xc2,\\xf0\\xd2\\x010\\xb5=\\xc2,\\xf0\\xd2\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x10\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00.\\x00.\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x000\\xb5=\\xc2,\\xf0\\xd2\\x010\\xb5=\\xc2,\\xf0\\xd2\\x010\\xb5=\\xc2,\\xf0\\xd2\\x010\\xb5=\\xc2,\\xf0\\xd2\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x10\\x00\\x00\\x00\\x0e\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00V\\x00B\\x00o\\x00x\\x00O\\x00G\\x00L\\x00"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00159158", 
+                        "timestamp": "2017-07-31 13:32:39,791", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "FindFirstFileExW", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\VBoxGuestAdditions\\VBoxOGL\\*"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,791", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryDirectoryFile", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000d4"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": "\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x000\\xb5=\\xc2,\\xf0\\xd2\\x010\\xb5=\\xc2,\\xf0\\xd2\\x010\\xb5=\\xc2,\\xf0\\xd2\\x010\\xb5=\\xc2,\\xf0\\xd2\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x10\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00.\\x00.\\x00"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": false, 
+                        "return": "0x80000006", 
+                        "timestamp": "2017-07-31 13:32:39,791", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryDirectoryFile", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000d4"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00159158", 
+                        "timestamp": "2017-07-31 13:32:39,811", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "FindFirstFileExW", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\VBoxGuestAdditions\\VBoxOGL\\*"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,811", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryDirectoryFile", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000d4"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": "\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x000\\xb5=\\xc2,\\xf0\\xd2\\x01\\xf2ida\\xd3\t\\xd3\\x010\\xb5=\\xc2,\\xf0\\xd2\\x010\\xb5=\\xc2,\\xf0\\xd2\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x10\\x00\\x00\\x00\\x04\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00.\\x00.\\x00"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": false, 
+                        "return": "0x80000006", 
+                        "timestamp": "2017-07-31 13:32:39,821", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryDirectoryFile", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000d4"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": false, 
+                        "return": "0x80000006", 
+                        "timestamp": "2017-07-31 13:32:39,821", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryDirectoryFile", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": false, 
+                        "return": "0x80000006", 
+                        "timestamp": "2017-07-31 13:32:39,821", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryDirectoryFile", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c4"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,851", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtWriteFile", 
+                        "arguments": [
+                            {
+                                "name": "Buffer", 
+                                "value": "<\\x00/\\x00E\\x00X\\x00E\\x00>\\x00\r\\x00\n\\x00"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c8"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,851", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateFile", 
+                        "arguments": [
+                            {
+                                "name": "ShareAccess", 
+                                "value": "0"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\f2db_appcompat.txt"
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x40100080"
+                            }, 
+                            {
+                                "name": "CreateDisposition", 
+                                "value": "3"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c8"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,851", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryInformationFile", 
+                        "arguments": [
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c8"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": "\\xb0\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\xac\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,851", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtSetInformationFile", 
+                        "arguments": [
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c8"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x001599a8", 
+                        "timestamp": "2017-07-31 13:32:39,851", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "FindFirstFileExW", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\WINDOWS\\system32\\kernel32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,861", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtWriteFile", 
+                        "arguments": [
+                            {
+                                "name": "Buffer", 
+                                "value": "<\\x00E\\x00X\\x00E\\x00 \\x00N\\x00A\\x00M\\x00E\\x00=\\x00\"\\x00k\\x00e\\x00r\\x00n\\x00e\\x00l\\x003\\x002\\x00.\\x00d\\x00l\\x00l\\x00\"\\x00 \\x00F\\x00I\\x00L\\x00T\\x00E\\x00R\\x00=\\x00\"\\x00G\\x00R\\x00A\\x00B\\x00M\\x00I\\x00_\\x00F\\x00I\\x00L\\x00T\\x00E\\x00R\\x00_\\x00T\\x00H\\x00I\\x00S\\x00F\\x00I\\x00L\\x00E\\x00O\\x00N\\x00L\\x00Y\\x00\"\\x00>\\x00\r\\x00\n\\x00"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c8"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,891", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtOpenFile", 
+                        "arguments": [
+                            {
+                                "name": "ShareAccess", 
+                                "value": "3"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\WINDOWS\\system32"
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x00100001"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,901", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryDirectoryFile", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": "kernel32.dll"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": "\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x80Z\\x0f5\\x1b\\xa1\\xcd\\x01\\xf6\\xc3\\xcen\\xd3\t\\xd3\\x01\\x80Z\\x0f5\\x1b\\xa1\\xcd\\x010\\x12\\x186Q\\xf0\\xd2\\x01\\x00\"\\x0f\\x00\\x00\\x00\\x00\\x00\\x000\\x0f\\x00\\x00\\x00\\x00\\x00 \\x00\\x00\\x00\\x18\\x00\\x00\\x00k\\x00e\\x00r\\x00n\\x00e\\x00l\\x003\\x002\\x00.\\x00d\\x00l\\x00l\\x00"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,911", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrGetDllHandle", 
+                        "arguments": [
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x7c800000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\WINDOWS\\system32\\kernel32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,911", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrLoadDll", 
+                        "arguments": [
+                            {
+                                "name": "Flags", 
+                                "value": "1234644"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x7c800000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\WINDOWS\\system32\\kernel32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,911", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrGetProcedureAddress", 
+                        "arguments": [
+                            {
+                                "name": "Ordinal", 
+                                "value": "0"
+                            }, 
+                            {
+                                "name": "FunctionName", 
+                                "value": "GetFileVersionInfoW"
+                            }, 
+                            {
+                                "name": "FunctionAddress", 
+                                "value": "0x77c0166f"
+                            }, 
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x77c00000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,911", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrGetDllHandle", 
+                        "arguments": [
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x7c800000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\WINDOWS\\system32\\kernel32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,911", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrLoadDll", 
+                        "arguments": [
+                            {
+                                "name": "Flags", 
+                                "value": "1234636"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x7c800000"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\WINDOWS\\system32\\kernel32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,911", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "LdrGetProcedureAddress", 
+                        "arguments": [
+                            {
+                                "name": "Ordinal", 
+                                "value": "0"
+                            }, 
+                            {
+                                "name": "FunctionName", 
+                                "value": "VerQueryValueW"
+                            }, 
+                            {
+                                "name": "FunctionAddress", 
+                                "value": "0x77c01805"
+                            }, 
+                            {
+                                "name": "ModuleHandle", 
+                                "value": "0x77c00000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,911", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateFile", 
+                        "arguments": [
+                            {
+                                "name": "ShareAccess", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "FileName", 
+                                "value": "C:\\WINDOWS\\system32\\kernel32.dll"
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x80100080"
+                            }, 
+                            {
+                                "name": "CreateDisposition", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,921", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryInformationFile", 
+                        "arguments": [
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": "\\x000\\x0f\\x00\\x00\\x00\\x00\\x00\\x00\"\\x0f\\x00\\x00\\x00\\x00\\x00\\x01\\x00\\x00\\x00\\x00\\x00\\x00\\x00"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,921", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtCreateSection", 
+                        "arguments": [
+                            {
+                                "name": "ObjectAttributes", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "DesiredAccess", 
+                                "value": "0x00000004"
+                            }, 
+                            {
+                                "name": "SectionHandle", 
+                                "value": "0x000000d4"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000cc"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:39,921", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "ZwMapViewOfSection", 
+                        "arguments": [
+                            {
+                                "name": "SectionOffset", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "SectionHandle", 
+                                "value": "0x000000d4"
+                            }, 
+                            {
+                                "name": "ProcessHandle", 
+                                "value": "0xffffffff"
+                            }, 
+                            {
+                                "name": "BaseAddress", 
+                                "value": "0x008f0000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:40,011", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtWriteFile", 
+                        "arguments": [
+                            {
+                                "name": "Buffer", 
+                                "value": " \\x00 \\x00 \\x00 \\x00<\\x00M\\x00A\\x00T\\x00C\\x00H\\x00I\\x00N\\x00G\\x00_\\x00F\\x00I\\x00L\\x00E\\x00 \\x00N\\x00A\\x00M\\x00E\\x00=\\x00\"\\x00k\\x00e\\x00r\\x00n\\x00e\\x00l\\x003\\x002\\x00.\\x00d\\x00l\\x00l\\x00\"\\x00 \\x00S\\x00I\\x00Z\\x00E\\x00=\\x00\"\\x009\\x009\\x001\\x007\\x004\\x004\\x00\"\\x00 \\x00C\\x00H\\x00E\\x00C\\x00K\\x00S\\x00U\\x00M\\x00=\\x00\"\\x000\\x00x\\x005\\x00A\\x00C\\x00B\\x00F\\x003\\x005\\x00E\\x00\"\\x00 \\x00B\\x00I\\x00N\\x00_\\x00F\\x00I\\x00L\\x00E\\x00_\\x00V\\x00E\\x00R\\x00S\\x00I\\x00O\\x00N\\x00=\\x00\"\\x005\\x00.\\x001\\x00.\\x002\\x006\\x000\\x000\\x00.\\x006\\x002\\x009\\x003\\x00\"\\x00 \\x00B\\x00I\\x00N\\x00_\\x00P\\x00R\\x00O\\x00D\\x00U\\x00C\\x00T\\x00_\\x00V\\x00E\\x00R\\x00S\\x00I\\x00O\\x00N\\x00=\\x00"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c8"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": false, 
+                        "return": "0x80000006", 
+                        "timestamp": "2017-07-31 13:32:40,011", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtQueryDirectoryFile", 
+                        "arguments": [
+                            {
+                                "name": "FileName", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c4"
+                            }, 
+                            {
+                                "name": "FileInformation", 
+                                "value": ""
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:40,011", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "NtWriteFile", 
+                        "arguments": [
+                            {
+                                "name": "Buffer", 
+                                "value": "<\\x00/\\x00E\\x00X\\x00E\\x00>\\x00\r\\x00\n\\x00<\\x00/\\x00D\\x00A\\x00T\\x00A\\x00B\\x00A\\x00S\\x00E\\x00>\\x00\r\\x00\n\\x00"
+                            }, 
+                            {
+                                "name": "FileHandle", 
+                                "value": "0x000000c8"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000001", 
+                        "timestamp": "2017-07-31 13:32:40,532", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "CreateProcessInternalW", 
+                        "arguments": [
+                            {
+                                "name": "ApplicationName", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "ProcessId", 
+                                "value": "1408"
+                            }, 
+                            {
+                                "name": "CommandLine", 
+                                "value": "C:\\WINDOWS\\system32\\dwwin.exe -x -s 192"
+                            }, 
+                            {
+                                "name": "ThreadHandle", 
+                                "value": "0x000000dc"
+                            }, 
+                            {
+                                "name": "ProcessHandle", 
+                                "value": "0x000000d8"
+                            }, 
+                            {
+                                "name": "ThreadId", 
+                                "value": "1840"
+                            }, 
+                            {
+                                "name": "CreationFlags", 
+                                "value": "0x04000020"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:46,931", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegCloseKey", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000094"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": true, 
+                        "return": "0x00000000", 
+                        "timestamp": "2017-07-31 13:32:46,941", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "RegCloseKey", 
+                        "arguments": [
+                            {
+                                "name": "Handle", 
+                                "value": "0x00000098"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": true, 
+                        "return": "0x00000001", 
+                        "timestamp": "2017-07-31 13:32:48,313", 
+                        "thread_id": "1148", 
+                        "repeated": 0, 
+                        "api": "CreateProcessInternalW", 
+                        "arguments": [
+                            {
+                                "name": "ApplicationName", 
+                                "value": ""
+                            }, 
+                            {
+                                "name": "ProcessId", 
+                                "value": "1296"
+                            }, 
+                            {
+                                "name": "CommandLine", 
+                                "value": "C:\\WINDOWS\\system32\\drwtsn32 -p 1192 -e 156 -g"
+                            }, 
+                            {
+                                "name": "ThreadHandle", 
+                                "value": "0x00000078"
+                            }, 
+                            {
+                                "name": "ProcessHandle", 
+                                "value": "0x00000080"
+                            }, 
+                            {
+                                "name": "ThreadId", 
+                                "value": "444"
+                            }, 
+                            {
+                                "name": "CreationFlags", 
+                                "value": "0x00000000"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ], 
+        "processtree": [
+            {
+                "parent_id": 1008, 
+                "pid": 1192, 
+                "children": [], 
+                "name": "Virus.Win9x.Altar.797"
+            }
+        ], 
+        "enhanced": [
+            {
+                "timestamp": "2017-07-31 13:32:38,539", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "C:\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AeDebug\\Auto"
+                }, 
+                "event": "read", 
+                "eid": 1
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,539", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "C:\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AeDebug\\Debugger"
+                }, 
+                "event": "read", 
+                "eid": 2
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,629", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "C:\\WINDOWS\\system32\\faultrep.dll", 
+                    "moduleaddress": "0x69450000"
+                }, 
+                "event": "load", 
+                "eid": 3
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,679", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\DW"
+                }, 
+                "event": "delete", 
+                "eid": 4
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,689", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\DoReport"
+                }, 
+                "event": "read", 
+                "eid": 5
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,689", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\ShowUI"
+                }, 
+                "event": "read", 
+                "eid": 6
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,689", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\AllOrNone"
+                }, 
+                "event": "read", 
+                "eid": 7
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,689", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\IncludeMicrosoftApps"
+                }, 
+                "event": "read", 
+                "eid": 8
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,689", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\IncludeWindowsApps"
+                }, 
+                "event": "read", 
+                "eid": 9
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,689", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\DoTextLog"
+                }, 
+                "event": "read", 
+                "eid": 10
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,699", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\IncludeKernelFaults"
+                }, 
+                "event": "read", 
+                "eid": 11
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,699", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\IncludeShutdownErrs"
+                }, 
+                "event": "read", 
+                "eid": 12
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,699", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\NumberOfFaultPipes"
+                }, 
+                "event": "read", 
+                "eid": 13
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,699", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\NumberOfHangPipes"
+                }, 
+                "event": "read", 
+                "eid": 14
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,699", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\MaxUserQueueSize"
+                }, 
+                "event": "read", 
+                "eid": 15
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,699", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\ForceQueueMode"
+                }, 
+                "event": "read", 
+                "eid": 16
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,699", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "HKEY_LOCAL_MACHINE\\System\\Setup\\SystemSetupInProgress"
+                }, 
+                "event": "read", 
+                "eid": 17
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,769", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "C:\\Documents and Settings\\Achsuthan\\Local Settings\\Temp\\Virus.Win9x.Altar.797", 
+                    "moduleaddress": null
+                }, 
+                "event": "load", 
+                "eid": 18
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,769", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "C:\\Documents and Settings\\Achsuthan\\Local Settings\\Temp\\Virus.Win9x.Altar.797", 
+                    "moduleaddress": "0x00400000"
+                }, 
+                "event": "load", 
+                "eid": 19
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,769", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\ExclusionList\\Virus.Win9x.Altar.797"
+                }, 
+                "event": "read", 
+                "eid": 20
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,939", 
+                "object": "registry", 
+                "data": {
+                    "regkey": "C:\\ActiveComputerName\\ComputerName"
+                }, 
+                "event": "read", 
+                "eid": 21
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,950", 
+                "object": "file", 
+                "data": {
+                    "file": "PIPE\\lsarpc"
+                }, 
+                "event": "write", 
+                "eid": 22
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,950", 
+                "object": "file", 
+                "data": {
+                    "file": "PIPE\\lsarpc"
+                }, 
+                "event": "read", 
+                "eid": 23
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,990", 
+                "object": "file", 
+                "data": {
+                    "file": "PIPE\\lsarpc"
+                }, 
+                "event": "write", 
+                "eid": 24
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:38,990", 
+                "object": "file", 
+                "data": {
+                    "file": "PIPE\\lsarpc"
+                }, 
+                "event": "read", 
+                "eid": 25
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,040", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "ddraw.dll", 
+                    "moduleaddress": null
+                }, 
+                "event": "load", 
+                "eid": 26
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,040", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "d3d8.dll", 
+                    "moduleaddress": null
+                }, 
+                "event": "load", 
+                "eid": 27
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,040", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "d3d9.dll", 
+                    "moduleaddress": null
+                }, 
+                "event": "load", 
+                "eid": 28
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,050", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\Virus.Win9x.Altar.797", 
+                    "moduleaddress": null
+                }, 
+                "event": "load", 
+                "eid": 29
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,060", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\Virus.Win9x.Altar.797", 
+                    "moduleaddress": "0x00400000"
+                }, 
+                "event": "load", 
+                "eid": 30
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,250", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "C:\\WINDOWS\\system32\\apphelp.dll", 
+                    "moduleaddress": "0x77b40000"
+                }, 
+                "event": "load", 
+                "eid": 31
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,270", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "USER32.dll", 
+                    "moduleaddress": "0x7e410000"
+                }, 
+                "event": "load", 
+                "eid": 32
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,300", 
+                "object": "file", 
+                "data": {
+                    "file": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\f2db_appcompat.txt"
+                }, 
+                "event": "write", 
+                "eid": 33
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,440", 
+                "object": "file", 
+                "data": {
+                    "file": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\f2db_appcompat.txt"
+                }, 
+                "event": "write", 
+                "eid": 34
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,440", 
+                "object": "file", 
+                "data": {
+                    "file": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\f2db_appcompat.txt"
+                }, 
+                "event": "write", 
+                "eid": 35
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,440", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "SHLWAPI.dll", 
+                    "moduleaddress": "0x77f60000"
+                }, 
+                "event": "load", 
+                "eid": 36
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,450", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "VERSION.dll", 
+                    "moduleaddress": "0x77c00000"
+                }, 
+                "event": "load", 
+                "eid": 37
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,490", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\python-3.4.3.msi", 
+                    "moduleaddress": null
+                }, 
+                "event": "load", 
+                "eid": 38
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,681", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "shell32.dll", 
+                    "moduleaddress": "0x7c9c0000"
+                }, 
+                "event": "load", 
+                "eid": 39
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,681", 
+                "object": "file", 
+                "data": {
+                    "file": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\python-3.4.3.msi"
+                }, 
+                "event": "read", 
+                "eid": 40
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,711", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "Kernel32", 
+                    "moduleaddress": null
+                }, 
+                "event": "load", 
+                "eid": 41
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,791", 
+                "object": "file", 
+                "data": {
+                    "file": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\f2db_appcompat.txt"
+                }, 
+                "event": "write", 
+                "eid": 42
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,851", 
+                "object": "file", 
+                "data": {
+                    "file": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\f2db_appcompat.txt"
+                }, 
+                "event": "write", 
+                "eid": 43
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,861", 
+                "object": "file", 
+                "data": {
+                    "file": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\f2db_appcompat.txt"
+                }, 
+                "event": "write", 
+                "eid": 44
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,911", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "C:\\WINDOWS\\system32\\kernel32.dll", 
+                    "moduleaddress": null
+                }, 
+                "event": "load", 
+                "eid": 45
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,911", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "C:\\WINDOWS\\system32\\kernel32.dll", 
+                    "moduleaddress": "0x7c800000"
+                }, 
+                "event": "load", 
+                "eid": 46
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,911", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "C:\\WINDOWS\\system32\\kernel32.dll", 
+                    "moduleaddress": null
+                }, 
+                "event": "load", 
+                "eid": 47
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:39,911", 
+                "object": "library", 
+                "data": {
+                    "pathtofile": null, 
+                    "file": "C:\\WINDOWS\\system32\\kernel32.dll", 
+                    "moduleaddress": "0x7c800000"
+                }, 
+                "event": "load", 
+                "eid": 48
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:40,011", 
+                "object": "file", 
+                "data": {
+                    "file": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\f2db_appcompat.txt"
+                }, 
+                "event": "write", 
+                "eid": 49
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:40,011", 
+                "object": "file", 
+                "data": {
+                    "file": "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\f2db_appcompat.txt"
+                }, 
+                "event": "write", 
+                "eid": 50
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:40,532", 
+                "object": "file", 
+                "data": {
+                    "file": "C:\\WINDOWS\\system32\\dwwin.exe -x -s 192"
+                }, 
+                "event": "execute", 
+                "eid": 51
+            }, 
+            {
+                "timestamp": "2017-07-31 13:32:48,313", 
+                "object": "file", 
+                "data": {
+                    "file": "C:\\WINDOWS\\system32\\drwtsn32 -p 1192 -e 156 -g"
+                }, 
+                "event": "execute", 
+                "eid": 52
+            }
+        ], 
+        "summary": {
+            "files": [
+                "C:\\DOCUME~1", 
+                "C:\\DOCUME~1\\ACHSUT~1", 
+                "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1", 
+                "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp", 
+                "C:\\Device\\KsecDD", 
+                "PIPE\\lsarpc", 
+                "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\f2db_appcompat.txt", 
+                "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\*", 
+                "python-3.4.3.msi", 
+                "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\python-3.4.3.msi", 
+                "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\VBoxGuestAdditions\\*", 
+                "C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\VBoxGuestAdditions\\VBoxOGL\\*", 
+                "C:\\WINDOWS\\system32\\kernel32.dll", 
+                "C:\\WINDOWS\\system32", 
+                "kernel32.dll"
+            ], 
+            "keys": [
+                "C:\\Registry\\Machine\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AeDebug\\", 
+                "HKEY_LOCAL_MACHINE\\Software\\Policies\\Microsoft\\PCHealth\\ErrorReporting\\", 
+                "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\", 
+                "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\\\ExclusionList\\", 
+                "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\PCHealth\\ErrorReporting\\\\InclusionList\\", 
+                "HKEY_LOCAL_MACHINE\\System\\Setup\\", 
+                "C:\\Registry\\Machine\\System\\CurrentControlSet\\Control\\ComputerName\\", 
+                "C:\\ActiveComputerName\\"
+            ], 
+            "mutexes": []
+        }
+    }, 
+    "target": {
+        "category": "file", 
+        "file": {
+            "yara": [], 
+            "sha1": "bcc7d85618852d896fcd7ecb7bf0ab29d6106534", 
+            "name": "Virus.Win9x.Altar.797", 
+            "type": "PE32 executable (GUI) Intel 80386, for MS Windows", 
+            "sha256": "c99cedd1cf3092155ff9e332414be9573f7ce70f83fe27b2252594709bca760c", 
+            "crc32": "485F41D3", 
+            "path": "/home/achsuthan/cuckoo-1.0/storage/binaries/c99cedd1cf3092155ff9e332414be9573f7ce70f83fe27b2252594709bca760c", 
+            "ssdeep": "24:OEhu706czdkMZYG9ntyI1kp2HRtzhdRxNn35xn/6wZHb3:OEP8M2G9ntyIeYHxdJnTnSO", 
+            "size": 4096, 
+            "sha512": "221025f07128a22c6078840d5b1b0a08f9c3481e895bcdb266e69b255e88908d17f286aab49bb79ee16b370e083478fb176c907c17a2f250472f23b85f80a116", 
+            "md5": "9c349cf6b5baa0d8f00a1dd3d07680a1"
+        }
+    }, 
+    "debug": {
+        "errors": [], 
+        "log": "2017-07-31 13:32:33,792 [root] INFO: Starting analyzer from: C:\\hprefkbhxa\n2017-07-31 13:32:33,792 [root] INFO: Storing results at: C:\\jOBmhqC\n2017-07-31 13:32:33,802 [root] INFO: Pipe server name: \\\\.\\PIPE\\SlzIsDac\n2017-07-31 13:32:33,823 [root] INFO: No analysis package specified, trying to detect it automagically\n2017-07-31 13:32:33,845 [root] INFO: Automatically selected analysis package \"exe\"\n2017-07-31 13:32:34,644 [root] INFO: Started auxiliary module Disguise\n2017-07-31 13:32:34,698 [root] INFO: Started auxiliary module Human\n2017-07-31 13:32:34,763 [root] INFO: Started auxiliary module Screenshots\n2017-07-31 13:32:34,763 [modules.auxiliary.screenshots] WARNING: Python Image Library is not installed, screenshots are disabled\n2017-07-31 13:32:34,838 [lib.api.process] INFO: Successfully executed process from path \"C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\Virus.Win9x.Altar.797\" with arguments \"None\" with pid 1192\n2017-07-31 13:32:35,032 [lib.api.process] INFO: Using QueueUserAPC injection\n2017-07-31 13:32:35,086 [lib.api.process] INFO: Successfully injected process with pid 1192\n2017-07-31 13:32:37,517 [lib.api.process] INFO: Successfully resumed process with pid 1192\n2017-07-31 13:32:37,576 [root] INFO: Added new process to list with pid: 1192\n2017-07-31 13:32:39,489 [root] INFO: Added new file to list with path: C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\f2db_appcompat.txt\n2017-07-31 13:32:40,664 [root] INFO: Announced process name: dwwin.exe\n2017-07-31 13:32:40,759 [root] INFO: Added new process to list with pid: 1408\n2017-07-31 13:32:40,855 [lib.api.process] INFO: Using QueueUserAPC injection\n2017-07-31 13:32:40,878 [lib.api.process] INFO: Successfully injected process with pid 1408\n2017-07-31 13:32:40,914 [root] INFO: Successfully injected process with pid 1408\n2017-07-31 13:32:46,851 [modules.auxiliary.human] INFO: Found button \"&Don't Send\", clicking it\n2017-07-31 13:32:49,592 [root] INFO: Announced process name: drwtsn32.exe\n2017-07-31 13:32:49,894 [root] INFO: Added new process to list with pid: 1296\n2017-07-31 13:32:50,194 [lib.api.process] INFO: Using QueueUserAPC injection\n2017-07-31 13:32:50,207 [lib.api.process] INFO: Successfully injected process with pid 1296\n2017-07-31 13:32:50,233 [root] INFO: Successfully injected process with pid 1296\n2017-07-31 13:32:51,474 [root] INFO: Process with pid 1408 has terminated\n2017-07-31 13:32:54,217 [root] INFO: Process with pid 1192 has terminated\n2017-07-31 13:32:55,576 [root] INFO: Process with pid 1296 has terminated\n2017-07-31 13:32:55,667 [root] INFO: Process list is empty, terminating analysis...\n2017-07-31 13:32:57,301 [root] INFO: Terminating remaining processes before shutdown...\n2017-07-31 13:32:57,588 [root] WARNING: File at path \"C:\\DOCUME~1\\ACHSUT~1\\LOCALS~1\\Temp\\f2db_appcompat.txt\" does not exist, skip\n2017-07-31 13:32:57,654 [root] INFO: Analysis completed\n"
+    }, 
+    "strings": [
+        "This program must be run under Win32", 
+        "[Altar] by T-2000 / Immortal Riot", 
+        "Awaiting the sacrifice..."
+    ], 
+    "virustotal": {
+        "scan_id": "c99cedd1cf3092155ff9e332414be9573f7ce70f83fe27b2252594709bca760c-1500894333", 
+        "sha1": "bcc7d85618852d896fcd7ecb7bf0ab29d6106534", 
+        "resource": "9c349cf6b5baa0d8f00a1dd3d07680a1", 
+        "response_code": 1, 
+        "scan_date": "2017-07-24 11:05:33", 
+        "permalink": "https://www.virustotal.com/file/c99cedd1cf3092155ff9e332414be9573f7ce70f83fe27b2252594709bca760c/analysis/1500894333/", 
+        "verbose_msg": "Scan finished, information embedded", 
+        "sha256": "c99cedd1cf3092155ff9e332414be9573f7ce70f83fe27b2252594709bca760c", 
+        "positives": 48, 
+        "total": 63, 
+        "md5": "9c349cf6b5baa0d8f00a1dd3d07680a1", 
+        "scans": {
+            "Bkav": {
+                "detected": false, 
+                "version": "1.3.0.9262", 
+                "result": null, 
+                "update": "20170724"
+            }, 
+            "MicroWorld-eScan": {
+                "detected": true, 
+                "version": "12.0.250.0", 
+                "result": "Win95.Altar.797", 
+                "update": "20170724"
+            }, 
+            "nProtect": {
+                "detected": false, 
+                "version": "2017-07-24.02", 
+                "result": null, 
+                "update": "20170724"
+            }, 
+            "CMC": {
+                "detected": true, 
+                "version": "1.1.0.977", 
+                "result": "Generic.Win32.9c349cf6b5!CMCRadar", 
+                "update": "20170724"
+            }, 
+            "CAT-QuickHeal": {
+                "detected": false, 
+                "version": "14.00", 
+                "result": null, 
+                "update": "20170724"
+            }, 
+            "McAfee": {
+                "detected": true, 
+                "version": "6.0.6.653", 
+                "result": "Artemis!9C349CF6B5BA", 
+                "update": "20170723"
+            }, 
+            "Cylance": {
+                "detected": true, 
+                "version": "2.3.1.101", 
+                "result": "Unsafe", 
+                "update": "20170724"
+            }, 
+            "VIPRE": {
+                "detected": false, 
+                "version": "59774", 
+                "result": null, 
+                "update": "20170724"
+            }, 
+            "SUPERAntiSpyware": {
+                "detected": false, 
+                "version": "5.6.0.1032", 
+                "result": null, 
+                "update": "20170724"
+            }, 
+            "TheHacker": {
+                "detected": false, 
+                "version": "6.8.0.5.1767", 
+                "result": null, 
+                "update": "20170723"
+            }, 
+            "K7GW": {
+                "detected": false, 
+                "version": "10.19.24065", 
+                "result": null, 
+                "update": "20170724"
+            }, 
+            "K7AntiVirus": {
+                "detected": false, 
+                "version": "10.19.24068", 
+                "result": null, 
+                "update": "20170724"
+            }, 
+            "TrendMicro": {
+                "detected": true, 
+                "version": "9.862.0.1074", 
+                "result": "PE_ALTAR.797", 
+                "update": "20170724"
+            }, 
+            "Baidu": {
+                "detected": true, 
+                "version": "1.0.0.2", 
+                "result": "Win32.Trojan.WisdomEyes.16070401.9500.10000", 
+                "update": "20170724"
+            }, 
+            "F-Prot": {
+                "detected": true, 
+                "version": "4.7.1.166", 
+                "result": "W32/Altar.797", 
+                "update": "20170724"
+            }, 
+            "Symantec": {
+                "detected": true, 
+                "version": "1.4.0.0", 
+                "result": "W95.Altar", 
+                "update": "20170724"
+            }, 
+            "ESET-NOD32": {
+                "detected": false, 
+                "version": "15797", 
+                "result": null, 
+                "update": "20170724"
+            }, 
+            "TrendMicro-HouseCall": {
+                "detected": true, 
+                "version": "9.950.0.1006", 
+                "result": "PE_ALTAR.797", 
+                "update": "20170724"
+            }, 
+            "Paloalto": {
+                "detected": true, 
+                "version": "1.0", 
+                "result": "generic.ml", 
+                "update": "20170724"
+            }, 
+            "ClamAV": {
+                "detected": false, 
+                "version": "0.99.2.0", 
+                "result": null, 
+                "update": "20170724"
+            }, 
+            "Kaspersky": {
+                "detected": true, 
+                "version": "15.0.1.13", 
+                "result": "Virus.Win9x.Altar.797", 
+                "update": "20170724"
+            }, 
+            "BitDefender": {
+                "detected": true, 
+                "version": "7.2", 
+                "result": "Win95.Altar.797", 
+                "update": "20170724"
+            }, 
+            "NANO-Antivirus": {
+                "detected": true, 
+                "version": "1.0.92.17955", 
+                "result": "Virus.Win32.Altar.cbzj", 
+                "update": "20170724"
+            }, 
+            "ViRobot": {
+                "detected": true, 
+                "version": "2014.3.20.0", 
+                "result": "Trojan.Win32.S.Agent.4096.DVNH", 
+                "update": "20170724"
+            }, 
+            "Rising": {
+                "detected": true, 
+                "version": "25.0.0.1", 
+                "result": "Malware.Generic.3!tfe (thunder:hqe9rypOKEM)", 
+                "update": "20170724"
+            }, 
+            "Ad-Aware": {
+                "detected": true, 
+                "version": "3.0.3.1010", 
+                "result": "Win95.Altar.797", 
+                "update": "20170724"
+            }, 
+            "Sophos": {
+                "detected": true, 
+                "version": "4.98.0", 
+                "result": "W95/Altar-797", 
+                "update": "20170724"
+            }, 
+            "Comodo": {
+                "detected": true, 
+                "version": "27501", 
+                "result": "UnclassifiedMalware", 
+                "update": "20170724"
+            }, 
+            "F-Secure": {
+                "detected": true, 
+                "version": "11.0.19100.45", 
+                "result": "Win95.Altar.797", 
+                "update": "20170724"
+            }, 
+            "DrWeb": {
+                "detected": true, 
+                "version": "7.0.28.2020", 
+                "result": "Win95.Altar.797", 
+                "update": "20170724"
+            }, 
+            "Zillya": {
+                "detected": true, 
+                "version": "2.0.0.3343", 
+                "result": "Virus.Altar.Win32.1", 
+                "update": "20170721"
+            }, 
+            "Invincea": {
+                "detected": true, 
+                "version": "6.3.0.25415", 
+                "result": "heuristic", 
+                "update": "20170607"
+            }, 
+            "McAfee-GW-Edition": {
+                "detected": true, 
+                "version": "v2015", 
+                "result": "BehavesLike.Win32.Virus.xz", 
+                "update": "20170723"
+            }, 
+            "Emsisoft": {
+                "detected": true, 
+                "version": "4.0.1.883", 
+                "result": "Win95.Altar.797 (B)", 
+                "update": "20170724"
+            }, 
+            "Ikarus": {
+                "detected": true, 
+                "version": "0.1.5.2", 
+                "result": "Virus.Win9x.Altar", 
+                "update": "20170724"
+            }, 
+            "Cyren": {
+                "detected": true, 
+                "version": "5.4.30.7", 
+                "result": "W32/Altar.797", 
+                "update": "20170724"
+            }, 
+            "Jiangmin": {
+                "detected": true, 
+                "version": "16.0.100", 
+                "result": "Win95/Altar.797", 
+                "update": "20170724"
+            }, 
+            "Webroot": {
+                "detected": true, 
+                "version": "1.0.0.207", 
+                "result": "W32.Malware.Gen", 
+                "update": "20170724"
+            }, 
+            "Avira": {
+                "detected": true, 
+                "version": "8.3.3.4", 
+                "result": "W95/Altar-797", 
+                "update": "20170724"
+            }, 
+            "Fortinet": {
+                "detected": true, 
+                "version": "5.4.247.0", 
+                "result": "W32/Altar.797", 
+                "update": "20170724"
+            }, 
+            "Antiy-AVL": {
+                "detected": true, 
+                "version": "3.0.0.1", 
+                "result": "Virus/Win9x.Altar.ber", 
+                "update": "20170724"
+            }, 
+            "Kingsoft": {
+                "detected": true, 
+                "version": "2013.8.14.323", 
+                "result": "Win95.Altar.797", 
+                "update": "20170724"
+            }, 
+            "Endgame": {
+                "detected": true, 
+                "version": "0.7.6", 
+                "result": "malicious (high confidence)", 
+                "update": "20170721"
+            }, 
+            "Arcabit": {
+                "detected": true, 
+                "version": "1.0.0.817", 
+                "result": "Win95.Altar.797", 
+                "update": "20170724"
+            }, 
+            "AegisLab": {
+                "detected": true, 
+                "version": "4.2", 
+                "result": "Virus.W9X.Altar!c", 
+                "update": "20170724"
+            }, 
+            "ZoneAlarm": {
+                "detected": true, 
+                "version": "1.0", 
+                "result": "Virus.Win9x.Altar.797", 
+                "update": "20170724"
+            }, 
+            "Microsoft": {
+                "detected": true, 
+                "version": "1.1.14003.0", 
+                "result": "Virus:Win95/Altar.797", 
+                "update": "20170724"
+            }, 
+            "AhnLab-V3": {
+                "detected": true, 
+                "version": "3.9.2.18187", 
+                "result": "Win95/Altar", 
+                "update": "20170724"
+            }, 
+            "ALYac": {
+                "detected": false, 
+                "version": "1.1.1.2", 
+                "result": null, 
+                "update": "20170724"
+            }, 
+            "AVware": {
+                "detected": false, 
+                "version": "1.5.0.42", 
+                "result": null, 
+                "update": "20170721"
+            }, 
+            "MAX": {
+                "detected": true, 
+                "version": "2017.6.26.1", 
+                "result": "malware (ai score=89)", 
+                "update": "20170724"
+            }, 
+            "VBA32": {
+                "detected": false, 
+                "version": "3.12.26.4", 
+                "result": null, 
+                "update": "20170721"
+            }, 
+            "Malwarebytes": {
+                "detected": false, 
+                "version": "2.1.1.1115", 
+                "result": null, 
+                "update": "20170724"
+            }, 
+            "Panda": {
+                "detected": true, 
+                "version": "4.6.4.2", 
+                "result": "W95/Altar.797", 
+                "update": "20170724"
+            }, 
+            "Zoner": {
+                "detected": false, 
+                "version": "1.0", 
+                "result": null, 
+                "update": "20170724"
+            }, 
+            "Tencent": {
+                "detected": true, 
+                "version": "1.0.0.1", 
+                "result": "Win32.Virus.Altar.Hufk", 
+                "update": "20170724"
+            }, 
+            "Yandex": {
+                "detected": true, 
+                "version": "5.5.1.3", 
+                "result": "Win32.Altar.797.B", 
+                "update": "20170724"
+            }, 
+            "SentinelOne": {
+                "detected": true, 
+                "version": "1.0.1.223", 
+                "result": "static engine - malicious", 
+                "update": "20170718"
+            }, 
+            "GData": {
+                "detected": true, 
+                "version": "A:25.13534B:25.10069", 
+                "result": "Win95.Altar.797", 
+                "update": "20170724"
+            }, 
+            "AVG": {
+                "detected": true, 
+                "version": "8.0.1489.320", 
+                "result": "Win95:Altar", 
+                "update": "20170724"
+            }, 
+            "Avast": {
+                "detected": true, 
+                "version": "8.0.1489.320", 
+                "result": "Win95:Altar", 
+                "update": "20170724"
+            }, 
+            "CrowdStrike": {
+                "detected": true, 
+                "version": "1.0", 
+                "result": "malicious_confidence_70% (D)", 
+                "update": "20170710"
+            }, 
+            "Qihoo-360": {
+                "detected": true, 
+                "version": "1.0.0.1120", 
+                "result": "HEUR/Malware.QVM20.Gen", 
+                "update": "20170724"
+            }
+        }
+    }, 
+    "network": {
+        "udp": [
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1038
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1038
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1042
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1042
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1042
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1042
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1042
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1042
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }
+        ], 
+        "irc": [], 
+        "http": [], 
+        "smtp": [], 
+        "tcp": [], 
+        "hosts": [
+            "239.255.255.250"
+        ], 
+        "pcap_sha256": "2dbebb45f01198979140323895c1aa1c2cb181fee6143d984d19967ad9f5d810", 
+        "dns": [], 
+        "domains": [], 
+        "icmp": []
+    }
+}
