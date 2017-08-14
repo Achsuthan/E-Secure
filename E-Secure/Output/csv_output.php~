@@ -109,7 +109,7 @@ header section -->
                 }
             }
         };
-        xmlhttp.open("GET", "http://localhost/SLIIT/E-Sucure/get_csv_details.php?id=" + htmlString);
+        xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Sucure/get_csv_details.php?id=" + htmlString);
         xmlhttp.send();
     }
 </script>

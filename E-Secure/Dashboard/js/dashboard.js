@@ -44,7 +44,7 @@ else {
      }
      }
      };
-     xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Sucure/train_details.php");
+     xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Secure/train_details.php");
      xmlhttp.send();
 
 
@@ -102,7 +102,7 @@ else {
 
             }
         };
-        xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Sucure/Training/training.php");
+        xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Secure/Training/training.php");
         xmlhttp.send();
 
     }

@@ -23,13 +23,13 @@ else {
                 }
             }
         };
-        xmlhttp.open("GET", "http://localhost/SLIIT/E-Sucure/get_user_details.php");
+        xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Secure/get_user_details.php");
         xmlhttp.send();
     }
 
 
     function file(id) {
-        window.open('http://localhost/E-Secure/Output/csv_output.php?output=' + id,"_blank");
+        window.open('http://192.168.172.140/E-Secure/Output/csv_output.php?output=' + id,"_blank");
     }
 }
 

@@ -41,14 +41,14 @@ function login()
 
                         }
                     };
-                    xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Sucure/login.php?username=" +document.getElementById("user").value+"&password="+document.getElementById("pass").value, true);
+                    xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Secure/login.php?username=" +document.getElementById("user").value+"&password="+document.getElementById("pass").value, true);
                     xmlhttp.send();
 
                 }
 
             }
         };
-        xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Sucure/loginadmin.php?username=" +document.getElementById("user").value+"&password="+document.getElementById("pass").value, true);
+        xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Secure/loginadmin.php?username=" +document.getElementById("user").value+"&password="+document.getElementById("pass").value, true);
         xmlhttp.send();
 
 
@@ -90,7 +90,7 @@ function signup()
 
                 }
             };
-            xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Sucure/register.php?username="+document.getElementById('ruser').value+"&password="+document.getElementById('rpass').value+"&email="+document.getElementById('email').value+"&firstname="+document.getElementById('fname').value+"&lastname="+document.getElementById('lname').value, true);
+            xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Secure/register.php?username="+document.getElementById('ruser').value+"&password="+document.getElementById('rpass').value+"&email="+document.getElementById('email').value+"&firstname="+document.getElementById('fname').value+"&lastname="+document.getElementById('lname').value, true);
             xmlhttp.send();
 
 
@@ -125,7 +125,7 @@ function checkusername() {
 
         }
     };
-    xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Sucure/usernamecheck.php?username=" + document.getElementById('ruser').value, true);
+    xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Secure/usernamecheck.php?username=" + document.getElementById('ruser').value, true);
     xmlhttp.send();
 }
 

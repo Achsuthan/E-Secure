@@ -100,7 +100,7 @@ header section -->
                 }
             }
         };
-        xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Sucure/train_details_csv.php?");
+        xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Secure/train_details_csv.php?");
         xmlhttp.send();
     }
 </script>

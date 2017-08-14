@@ -1,0 +1,106 @@
+[Mon 2017-07-31 11:25:42 AM] SUCCESS  :  Virus training session start
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS  :  Virus training session start
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Check JSON Files in the virus_samples directory
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Virus.Win9x.Altar.797.json file found in the virus_samples directory
+
+[Mon 2017-07-31 11:28:19 AM] Virus.Win9x.Altar.797.json file Decode successfully 
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Start to get the API calls and return code form the JSON file  Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Retrun Code found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Failure API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Retrun Code found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Failure API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Failure API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Retrun Code found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Retrun Code found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Failure API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Retrun Code found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Retrun Code found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Failure API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Retrun Code found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Retrun Code found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Retrun Code found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Success API found in the JSON file Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Finished getting the API calls and return code form the JSON file  Virus.Win9x.Altar.797.json
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Check JSON Files again in the virus_samples directory to store in the matrix
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : 2 No of samples identified from the virus_samples Directory 
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS :  counting the API calls and return calculation start from the . JSON file
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS :  counting the API calls and return calculation start from the .. JSON file
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS :  counting the API calls and return calculation start from the Virus.Win9x.Altar.797.json JSON file
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS :  counting the API calls and return calculation finished from the Virus.Win9x.Altar.797.json JSON file
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Check JSON Files again finished in the virus_samples directory to store in the matrix
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS : Start Create CSV file
+
+[Mon 2017-07-31 11:28:19 AM] SUCCESS :  Finished CSV file creation
+

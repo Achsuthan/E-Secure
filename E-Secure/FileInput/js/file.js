@@ -58,7 +58,7 @@ else {
 
                 }
             };
-            xmlhttp.open("POST", "http://192.168.172.140/SLIIT/E-Sucure/getfile.php");
+            xmlhttp.open("POST", "http://192.168.172.140/SLIIT/E-Secure/getfile.php");
             xmlhttp.send(data);
         }
         else {
@@ -170,7 +170,7 @@ else {
                     }
                 }
             };
-            xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Sucure/getfiledetails.php?filename=" + output);
+            xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Secure/getfiledetails.php?filename=" + output);
             xmlhttp.send();
         }, 5000);
     }

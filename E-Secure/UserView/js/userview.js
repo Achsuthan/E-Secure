@@ -23,7 +23,7 @@ else {
                 }
             }
         };
-        xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Sucure/get_user_details.php");
+        xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Secure/get_user_details.php");
         xmlhttp.send();
     }
 

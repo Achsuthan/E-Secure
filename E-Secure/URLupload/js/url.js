@@ -22,7 +22,7 @@ else {
 
                     }
                 };
-                xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Sucure/geturl.php?url=" + document.getElementById("url").value);
+                xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Secure/geturl.php?url=" + document.getElementById("url").value);
                 xmlhttp.send();
             }
             else {
@@ -53,7 +53,7 @@ else {
                     }
                 }
             };
-            xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Sucure/getfiledetails.php");
+            xmlhttp.open("GET", "http://192.168.172.140/SLIIT/E-Secure/getfiledetails.php");
             xmlhttp.send();
         }, 5000);
     }
